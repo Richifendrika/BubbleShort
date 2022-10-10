@@ -4,8 +4,8 @@ namespace Buble2
 {
     class Program
     {
-        // Deklarasi array int dengan ukuran 20
-        private int[] a = new int[20];
+        // Deklarasi array int dengan ukuran 30
+        private int[] a = new int[30];
 
         // Deklarasi variabel int untuk menyimpan banyaknya data pada array
         private int n;
@@ -16,14 +16,16 @@ namespace Buble2
             // Menerima angka untuk menentukan banyaknya data yang disimpan pada array
             while (true)
             {
+                // Method untuk mengisi banyak data didalam elemen array
                 Console.Write("Masukan banyaknya elemen pada Array: ");
                 string s = Console.ReadLine();
                 n = Int32.Parse(s);
-                if (n <= 20)
+                if (n <= 30)
                     break;
                 else
-                    Console.WriteLine("\nArray dapat mempunyai maksimal 20 elemen.\n");
+                    Console.WriteLine("\nArray dapat mempunyai maksimal 30 elemen.\n");
             }
+            // fungsi untuk menjalankan banyak data
             Console.WriteLine("");
             Console.WriteLine("-----------------------");
             Console.WriteLine(" Masukan elemen array ");
@@ -37,6 +39,7 @@ namespace Buble2
                 a[i] = Int32.Parse(s1);
             }
         }
+        // fungsi / method untuk menampilkan
         public void display()
         {
             // Menampilkan array yang tersusun
@@ -44,9 +47,9 @@ namespace Buble2
             Console.WriteLine("---------------------------------");
             Console.WriteLine("Element array yang telah tersusun");
             Console.WriteLine("---------------------------------");
-            for (int j = 0; j < n; j++)
+            for (int RF = 0; RF < n; RF++)
             {
-                Console.WriteLine(a[j]);
+                Console.WriteLine(a[RF]);
             }
             Console.WriteLine("");
         }
@@ -55,15 +58,15 @@ namespace Buble2
             for (int i = 1; i < n; i++) // for n - 1 passes
             {
                 // Pada pass i,bandingkan n - i elemen pertama dengan elemen
-                for (int j = 0; j < n - i; j++)
+                for (int RF = 0; RF < n - i; RF++)
                 {
-                    if (a[j] > a[j + 1]) // Jika elemen tidak dalam urutan yang benar
+                    if (a[RF] > a[RF + 1]) // Jika elemen tidak dalam urutan yang benar
                     {
                         // Tukar elemen
                         int temp;
-                        temp = a[j];
-                        a[j] = a[j + 1];
-                        a[j + 1] = temp;
+                        temp = a[RF];
+                        a[RF] = a[RF + 1];
+                        a[RF + 1] = temp;
                     }
                 }
             }
